@@ -11,6 +11,13 @@
         android:layout_height="match_parent">
 
         <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_bottom" />
+
+        <ImageView
             android:layout_width="800dp"
             android:layout_height="wrap_content"
             android:src="@drawable/splash_bg" />
@@ -28,10 +35,5 @@
                 android:src="@drawable/logo" />
         </LinearLayout>
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:src="@drawable/splash_bottom" />
     </FrameLayout>
 </LinearLayout>
