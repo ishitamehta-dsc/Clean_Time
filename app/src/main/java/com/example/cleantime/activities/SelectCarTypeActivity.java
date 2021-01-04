@@ -20,27 +20,27 @@ public class SelectCarTypeActivity extends AppCompatActivity implements View.OnC
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select_car_type);
 
-        initViews();
+        //initViews();
     }
 
-    private void initViews() {
-        cvAcw = findViewById(R.id.cvAcw);
-        ivAcw = findViewById(R.id.ivAcw);
-        tvAcw = findViewById(R.id.tvAcw);
-
-        cvAcw.setOnClickListener(this);
-    }
-
+//    private void initViews() {
+//        cvAcw = findViewById(R.id.cvAcw);
+//        ivAcw = findViewById(R.id.ivAcw);
+//        tvAcw = findViewById(R.id.tvAcw);
+//
+//        cvAcw.setOnClickListener(this);
+//    }
+//
     @Override
     public void onClick(View v) {
         if (v == cvAcw) {
-            changeUI();
+            //changeUI();
         }
     }
-
-    private void changeUI() {
-        cvAcw.setBackgroundColor(getResources().getColor(R.color.blue));
-        ivAcw.setImageDrawable(getResources().getDrawable(R.drawable.acw_selected));
-        tvAcw.setTextColor(getResources().getColor(R.color.white));
-    }
+//
+//    private void changeUI() {
+//        cvAcw.setBackgroundColor(getResources().getColor(R.color.blue));
+//        ivAcw.setImageDrawable(getResources().getDrawable(R.drawable.acw_selected));
+//        tvAcw.setTextColor(getResources().getColor(R.color.white));
+//    }
 }

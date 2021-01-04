@@ -1,4 +1,4 @@
-package com.example.cleantime.activities;
+package com.example.cleantime.common;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -14,6 +14,7 @@ import androidx.core.content.ContextCompat;
 import androidx.viewpager2.widget.ViewPager2;
 
 import com.example.cleantime.R;
+import com.example.cleantime.auth.LoginActivity;
 import com.example.cleantime.common.OnBoardingAdapter;
 import com.example.cleantime.common.OnBoardingItem;
 
@@ -24,6 +25,7 @@ public class OnBoardingActivity extends AppCompatActivity {
     private OnBoardingAdapter onBoardingAdapter;
     private ViewPager2 onBoardingViewPager;
     private LinearLayout layoutOnBoardingIndicators;
+    private TextView tvNext;
     private TextView tvSkip;
 
     @Override
@@ -40,6 +42,7 @@ public class OnBoardingActivity extends AppCompatActivity {
         onBoardingViewPager = findViewById(R.id.onBoardingViewPager);
         onBoardingViewPager.setAdapter(onBoardingAdapter);
         tvSkip = findViewById(R.id.tvSkip);
+        tvNext = findViewById(R.id.tvNext);
         setOnIndicators();
         setCurrentIndicator(0);
 
@@ -50,7 +53,14 @@ public class OnBoardingActivity extends AppCompatActivity {
                 setCurrentIndicator(position);
             }
         });
+
         tvSkip.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+            }
+        });
+        tvNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -58,7 +68,7 @@ public class OnBoardingActivity extends AppCompatActivity {
                     onBoardingViewPager.setCurrentItem(onBoardingViewPager.getCurrentItem() + 1);
                 } else {
                     startActivity(new Intent(getApplicationContext(), LoginActivity.class));
-                    finish();
+                    //finish();
                 }
             }
         });
@@ -120,9 +130,9 @@ public class OnBoardingActivity extends AppCompatActivity {
             }
         }
         if (index == onBoardingAdapter.getItemCount() - 1) {
-            tvSkip.setText("Start");
+            tvNext.setText("Let's Get Started");
         } else {
-            tvSkip.setText("Next");
+            tvNext.setText("Next");
         }
     }
 }

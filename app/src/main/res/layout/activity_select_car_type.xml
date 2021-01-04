@@ -74,7 +74,7 @@
                             android:layout_width="80dp"
                             android:layout_height="80dp"
                             android:layout_gravity="center"
-                            android:src="@mipmap/acw_unselected" />
+                            android:src="@drawable/acw_unselected" />
 
                         <TextView
                             android:id="@+id/tvAcw"
@@ -112,7 +112,7 @@
                             android:layout_width="80dp"
                             android:layout_height="80dp"
                             android:layout_gravity="center"
-                            android:src="@mipmap/acw_unselected" />
+                            android:src="@drawable/rcw_unselected" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -120,7 +120,7 @@
                             android:layout_gravity="center"
                             android:layout_marginTop="8dp"
                             android:gravity="center"
-                            android:text="Automatic\nCar Wash"
+                            android:text="Regular\nCar Wash"
                             android:textColor="@color/black"
                             android:textSize="16sp" />
                     </LinearLayout>
@@ -156,7 +156,7 @@
                             android:layout_width="80dp"
                             android:layout_height="80dp"
                             android:layout_gravity="center"
-                            android:src="@mipmap/acw_unselected" />
+                            android:src="@drawable/seat_256"/>
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -164,7 +164,7 @@
                             android:layout_gravity="center"
                             android:layout_marginTop="8dp"
                             android:gravity="center"
-                            android:text="Automatic\nCar Wash"
+                            android:text="Interior Cleaning\n&amp; Services"
                             android:textColor="@color/black"
                             android:textSize="16sp" />
                     </LinearLayout>
@@ -193,7 +193,7 @@
                             android:layout_width="80dp"
                             android:layout_height="80dp"
                             android:layout_gravity="center"
-                            android:src="@mipmap/acw_unselected" />
+                            android:src="@drawable/atw_unselected" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -201,7 +201,7 @@
                             android:layout_gravity="center"
                             android:layout_marginTop="8dp"
                             android:gravity="center"
-                            android:text="Automatic\nCar Wash"
+                            android:text="Automated\nTunnel Wash"
                             android:textColor="@color/black"
                             android:textSize="16sp" />
                     </LinearLayout>
@@ -237,7 +237,7 @@
                             android:layout_width="80dp"
                             android:layout_height="80dp"
                             android:layout_gravity="center"
-                            android:src="@mipmap/acw_unselected" />
+                            android:src="@drawable/wheel" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -245,7 +245,7 @@
                             android:layout_gravity="center"
                             android:layout_marginTop="8dp"
                             android:gravity="center"
-                            android:text="Automatic\nCar Wash"
+                            android:text="Wheel &amp;\n Dashboard"
                             android:textColor="@color/black"
                             android:textSize="16sp" />
                     </LinearLayout>
@@ -274,7 +274,7 @@
                             android:layout_width="80dp"
                             android:layout_height="80dp"
                             android:layout_gravity="center"
-                            android:src="@mipmap/acw_unselected" />
+                            android:src="@drawable/interior" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -282,7 +282,7 @@
                             android:layout_gravity="center"
                             android:layout_marginTop="8dp"
                             android:gravity="center"
-                            android:text="Automatic\nCar Wash"
+                            android:text="Interior &amp;\n Cleaning"
                             android:textColor="@color/black"
                             android:textSize="16sp" />
                     </LinearLayout>
