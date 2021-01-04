@@ -388,6 +388,7 @@
         android:background="@color/blue"
         app:headerLayout="@layout/nav_header"
         app:itemBackground="@drawable/drawer_item_bg"
+        app:itemIconTint="@color/white"
         app:itemTextAppearance="@font/montserrat"
         app:itemTextColor="@color/cardview_light_background"
         app:menu="@menu/nav_menu">
