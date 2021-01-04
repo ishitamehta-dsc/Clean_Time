@@ -5,41 +5,41 @@
     <item
         android:id="@+id/profile"
         android:icon="@drawable/ic_my_profile"
-
+        android:iconTint="@color/white"
         android:title="@string/my_profile" />
 
     <item
         android:id="@+id/packages"
-        android:orderInCategory="100"
         android:icon="@drawable/ic_my_packages"
+        android:orderInCategory="100"
         android:title="@string/my_packages"
         app:showAsAction="never" />
 
     <item
         android:id="@+id/address"
-        android:orderInCategory="100"
         android:icon="@drawable/ic_my_address"
+        android:orderInCategory="100"
         android:title="@string/my_address"
         app:showAsAction="never" />
 
     <item
         android:id="@+id/vehicle"
-        android:orderInCategory="100"
         android:icon="@drawable/ic_my_vehical"
+        android:orderInCategory="100"
         android:title="@string/my_vehicle"
         app:showAsAction="never" />
 
     <item
         android:id="@+id/payment"
-        android:orderInCategory="100"
         android:icon="@drawable/ic_my_payment"
+        android:orderInCategory="100"
         android:title="@string/my_payment"
         app:showAsAction="never" />
 
     <item
         android:id="@+id/notification"
-        android:orderInCategory="100"
         android:icon="@drawable/ic_notification"
+        android:orderInCategory="100"
         android:title="@string/notification"
         app:showAsAction="never" />
 
@@ -52,15 +52,15 @@
 
     <item
         android:id="@+id/support"
-        android:orderInCategory="100"
         android:icon="@drawable/ic_support"
+        android:orderInCategory="100"
         android:title="@string/support"
         app:showAsAction="never" />
 
     <item
         android:id="@+id/about"
-        android:orderInCategory="100"
         android:icon="@drawable/ic_about"
+        android:orderInCategory="100"
         android:title="@string/about"
         app:showAsAction="never" />
 

@@ -7,8 +7,19 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     android:orientation="vertical"
-
     tools:context=".home.HomeActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_bottom" />
+    </FrameLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -77,9 +88,9 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
                     android:fontFamily="@font/montserrat_bold"
-                    android:textColor="@color/dark_grey"
                     android:gravity="start"
                     android:hint="Good Afternoon"
+                    android:textColor="@color/dark_grey"
                     android:textSize="17sp" />
 
                 <ImageView
@@ -336,39 +347,27 @@
                         android:id="@+id/etPincode"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:hint=" e.g 452001"
                         android:layout_marginBottom="10dp"
-                        android:textCursorDrawable="@color/blue"
-                        android:backgroundTint="@color/blue" />
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/blue"
+                        android:hint=" e.g 452001"
+                        android:textCursorDrawable="@color/blue" />
 
                     <Button
                         android:id="@+id/btnSubmit"
                         android:layout_width="wrap_content"
                         android:layout_height="35dp"
-                        android:gravity="bottom"
-                        android:text="Submit"
-                        android:textSize="11sp"
-                        android:textColor="@color/cardview_light_background"
+                        android:layout_gravity="center"
                         android:layout_marginBottom="10dp"
-                        android:textAllCaps="false"
+                        android:background="@drawable/button"
                         android:fontFamily="@font/montserrat_bold"
-                        android:background="@drawable/button"/>
+                        android:gravity="center"
+                        android:text="Submit"
+                        android:textAllCaps="false"
+                        android:textColor="@color/cardview_light_background"
+                        android:textSize="11sp" />
                 </LinearLayout>
 
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="Proceed"
-                    android:layout_marginBottom="10dp"
-                    android:textColor="@color/cardview_light_background"
-                    android:layout_marginTop="20dp"
-                    android:paddingStart="100dp"
-                    android:paddingEnd="100dp"
-                    android:textAllCaps="false"
-                    android:fontFamily="@font/montserrat_bold"
-                    android:background="@drawable/button"/>
             </LinearLayout>
         </ScrollView>
 
@@ -388,6 +387,7 @@
         android:layout_gravity="start"
         android:background="@color/blue"
         app:headerLayout="@layout/nav_header"
+        app:itemBackground="@drawable/drawer_item_bg"
         app:itemTextAppearance="@font/montserrat"
         app:itemTextColor="@color/cardview_light_background"
         app:menu="@menu/nav_menu">
