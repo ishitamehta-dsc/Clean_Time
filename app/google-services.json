@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "882113830134",
+    "project_id": "clean-time-9833e",
+    "storage_bucket": "clean-time-9833e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:882113830134:android:a9ffd3de65f676256320d7",
+        "android_client_info": {
+          "package_name": "com.example.cleantime"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "882113830134-m9kthrjpo9mqkq76poq8cisjqc9tnt4f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC5dCvV_tnVrlgztZaZB5CoK02FyU78Dp4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "882113830134-m9kthrjpo9mqkq76poq8cisjqc9tnt4f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
