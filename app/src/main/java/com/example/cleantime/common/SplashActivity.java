@@ -7,7 +7,6 @@ import android.os.Handler;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.cleantime.R;
-import com.example.cleantime.activities.OnBoardingActivity;
 
 public class SplashActivity extends AppCompatActivity {
 

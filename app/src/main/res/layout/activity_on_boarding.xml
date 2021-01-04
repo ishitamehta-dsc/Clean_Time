@@ -4,9 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.OnBoardingActivity">
+    tools:context=".common.OnBoardingActivity">
 
     <FrameLayout
+        android:id="@+id/frameLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -16,6 +17,7 @@
             android:layout_gravity="bottom"
             android:scaleType="fitXY"
             android:src="@drawable/ic_bottom" />
+
         <ImageView
             android:layout_width="800dp"
             android:layout_height="wrap_content"
@@ -41,11 +43,11 @@
         android:padding="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/tvSkip"
+        app:layout_constraintBottom_toTopOf="@id/tvNext"
         app:layout_constraintTop_toBottomOf="@id/onBoardingViewPager" />
 
     <TextView
-        android:id="@+id/tvSkip"
+        android:id="@+id/tvNext"
         android:layout_width="match_parent"
         android:layout_height="45dp"
         android:layout_marginStart="32dp"
@@ -61,4 +63,22 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/layoutOnBoardingIndicators" />
+
+    <TextView
+        android:id="@+id/tvSkip"
+        android:layout_width="match_parent"
+        android:padding="5dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:fontFamily="@font/montserrat"
+        android:gravity="bottom"
+        android:text="Skip"
+        android:textSize="16sp"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/frameLayout"
+        app:layout_constraintTop_toBottomOf="@+id/tvNext" />
 </androidx.constraintlayout.widget.ConstraintLayout>

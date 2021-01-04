@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/profile"
+        android:title="My Profile"
+        android:orderInCategory="100"
+        android:icon="@drawable/user"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/packages"
+        android:title="My Packages"
+        android:orderInCategory="100"
+        android:icon="@drawable/group_1142"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/address"
+        android:title="My Address"
+        android:orderInCategory="100"
+        android:icon="@drawable/address"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/vehicle"
+        android:title="My Vehicle"
+        android:orderInCategory="100"
+        android:icon="@drawable/my_vehicle"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/payment"
+    android:title="My Payment"
+    android:orderInCategory="100"
+    android:icon="@drawable/payment"
+    app:showAsAction="never"/>
+
+    <item android:id="@+id/notification"
+        android:title="Notification"
+        android:orderInCategory="100"
+        android:icon="@drawable/notification"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/requests"
+        android:title="My Requests"
+        android:orderInCategory="100"
+        android:icon="@drawable/requests"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/support"
+        android:title="Support"
+        android:orderInCategory="100"
+        android:icon="@drawable/support"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/about"
+        android:title="About"
+        android:orderInCategory="100"
+        android:icon="@drawable/about"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/logout"
+        android:title="Logout"
+        android:orderInCategory="100"
+        android:icon="@drawable/logout"
+        app:showAsAction="never"/>
+
+</menu>

@@ -11,9 +11,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CleanTime"
         tools:ignore="AllowBackup">
-        <activity android:name=".activities.OTPActivity" />
-        <activity android:name=".activities.LoginActivity" />
-        <activity android:name=".activities.OnBoardingActivity" />
+        <activity android:name=".auth.OTPActivity" />
+        <activity android:name=".auth.LoginActivity" />
+        <activity android:name=".common.OnBoardingActivity" />
         <activity android:name=".common.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,7 +21,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity" />
+        <activity android:name=".home.HomeActivity" />
         <activity android:name=".activities.SelectCarTypeActivity" />
     </application>
 
