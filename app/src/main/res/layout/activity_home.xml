@@ -394,6 +394,4 @@
         app:itemTextColor="@color/cardview_light_background"
         app:menu="@menu/nav_menu">
     </com.google.android.material.navigation.NavigationView>
-
-
 </androidx.drawerlayout.widget.DrawerLayout>
