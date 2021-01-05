@@ -4,15 +4,15 @@
     android:layout_width="match_parent"
     android:layout_height="200dp"
     android:orientation="vertical"
-    android:background="@color/dark_blue">
+    android:background="@color/blue">
 
     <ImageView
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:layout_margin="16sp"
         android:layout_gravity="center_vertical"
-        android:src="@drawable/ic_back"
-        android:contentDescription="@string/app_name" />
+        android:layout_margin="16sp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_back" />
 
     <ImageView
         android:layout_width="match_parent"

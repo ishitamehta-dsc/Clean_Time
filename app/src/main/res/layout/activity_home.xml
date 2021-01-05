@@ -29,8 +29,8 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:background="@color/dark_blue"
+            android:layout_height="70dp"
+            android:background="@color/blue"
             android:gravity="center"
             android:orientation="vertical">
 
@@ -341,30 +341,32 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
                     android:orientation="horizontal">
 
                     <EditText
                         android:id="@+id/etPincode"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="10dp"
                         android:layout_weight="1"
                         android:backgroundTint="@color/blue"
                         android:hint=" e.g 452001"
                         android:textCursorDrawable="@color/blue" />
 
                     <Button
-                        android:id="@+id/btnSubmit"
+                        android:id="@+id/btnCheck"
                         android:layout_width="wrap_content"
-                        android:layout_height="35dp"
-                        android:layout_gravity="center"
-                        android:layout_marginBottom="10dp"
-                        android:background="@drawable/button"
+                        android:layout_height="36dp"
+                        android:layout_gravity="bottom"
+                        android:layout_marginBottom="2dp"
+                        android:background="@drawable/btn_bg"
                         android:fontFamily="@font/montserrat_bold"
                         android:gravity="center"
-                        android:text="Submit"
+                        android:paddingTop="3dp"
+                        android:paddingBottom="5dp"
+                        android:text="Check"
+                        android:textColor="@android:color/white"
                         android:textAllCaps="false"
-                        android:textColor="@color/cardview_light_background"
                         android:textSize="11sp" />
                 </LinearLayout>
 
@@ -377,7 +379,6 @@
             android:layout_height="match_parent">
 
         </FrameLayout>
-
     </LinearLayout>
 
     <com.google.android.material.navigation.NavigationView
@@ -392,8 +393,6 @@
         app:itemTextAppearance="@font/montserrat"
         app:itemTextColor="@color/cardview_light_background"
         app:menu="@menu/nav_menu">
-
-
     </com.google.android.material.navigation.NavigationView>
 
 
