@@ -76,7 +76,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
                         drawerLayout.closeDrawer(GravityCompat.START);
                         break;
 
-                    //case  R.id.about
+
                 }
                 return true;
             }
