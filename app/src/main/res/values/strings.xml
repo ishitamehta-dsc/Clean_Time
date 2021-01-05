@@ -22,6 +22,6 @@
     <string name="support">Support</string>
     <string name="about">About</string>
     <string name="logout">Logout</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="expires_04_25">Expires 04/25</string>
+    <string name="car_number">**** **** **** 4578</string>
 </resources>
