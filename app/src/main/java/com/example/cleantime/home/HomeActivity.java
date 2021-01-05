@@ -75,6 +75,8 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
                         tvToolbarTitle.setText("MyPackages");
                         drawerLayout.closeDrawer(GravityCompat.START);
                         break;
+
+                    //case  R.id.about
                 }
                 return true;
             }
