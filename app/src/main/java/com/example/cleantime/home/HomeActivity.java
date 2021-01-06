@@ -9,7 +9,6 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toolbar;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
@@ -20,6 +19,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import com.example.cleantime.R;
 import com.example.cleantime.auth.LoginActivity;
 import com.example.cleantime.home.fragments.AboutFragment;
+import com.example.cleantime.home.fragments.HomeFragment;
 import com.example.cleantime.home.fragments.MyAddressFragment;
 import com.example.cleantime.home.fragments.MyPackageFragment;
 import com.example.cleantime.home.fragments.MyPaymentFragment;
@@ -27,10 +27,9 @@ import com.example.cleantime.home.fragments.MyProfileFragment;
 import com.example.cleantime.home.fragments.MyRequestsFragment;
 import com.example.cleantime.home.fragments.MyVehicleFragment;
 import com.example.cleantime.home.fragments.NotificationFragment;
+import com.example.cleantime.home.fragments.ServicesFragment;
 import com.example.cleantime.home.fragments.SupportFragment;
 import com.google.android.material.navigation.NavigationView;
-
-import java.sql.RowId;
 
 public class HomeActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -67,11 +66,12 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         nav_view = findViewById(R.id.nav_view);
 
         ivMenuNav.setOnClickListener(this);
-
+        getSupportFragmentManager().beginTransaction().replace(R.id.frameContent, new
+                HomeFragment()).commit();
         nav_view.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch (item.getItemId()){
+                switch (item.getItemId()) {
 
                     case R.id.profile:
                         getSupportFragmentManager().beginTransaction().replace(R.id.frameContent,
@@ -136,6 +136,13 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
                         drawerLayout.closeDrawer(GravityCompat.START);
                         break;
 
+                    case R.id.services:
+                        getSupportFragmentManager().beginTransaction().replace(R.id.frameContent,
+                                new ServicesFragment()).addToBackStack(null).commit();
+                        tvToolbarTitle.setText("Services");
+                        drawerLayout.closeDrawer(GravityCompat.START);
+                        break;
+
                     case R.id.logout:
                         AlertDialog.Builder builder = new AlertDialog.Builder(HomeActivity.this);
                         builder.setTitle("LOGOUT");
@@ -150,14 +157,14 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
 
                             }
                         });
-                       builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
-                           @Override
-                           public void onClick(DialogInterface dialogInterface, int i) {
-                               dialogInterface.cancel();
-                           }
-                       });
-                       AlertDialog alert1 = builder.create();
-                       alert1.show();
+                        builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                dialogInterface.cancel();
+                            }
+                        });
+                        AlertDialog alert1 = builder.create();
+                        alert1.show();
                 }
                 return true;
             }
