@@ -11,6 +11,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CleanTime"
         tools:ignore="AllowBackup">
+        <activity android:name=".home.VehicleListActivity"></activity>
+        <activity android:name=".home.SchedulePickupActivity" />
         <activity android:name=".auth.OTPActivity" />
         <activity android:name=".auth.LoginActivity" />
         <activity android:name=".common.OnBoardingActivity" />

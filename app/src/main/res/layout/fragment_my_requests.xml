@@ -6,9 +6,16 @@
     tools:context=".home.fragments.MyRequestsFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="hello_blank_fragment" />
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/requestRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
 </FrameLayout>
