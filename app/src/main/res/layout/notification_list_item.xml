@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="5dp"
+        android:padding="5dp">
+
+    <ImageView
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:src="@drawable/mail_white"
+        android:layout_gravity="center"
+        android:padding="12dp"
+        android:background="@drawable/bg_circle"/>
+
+    <LinearLayout
+        android:id="@+id/lvNotificationHead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tvNotificationHead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginBottom="2dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="Vehicle Added"/>
+
+        <TextView
+            android:id="@+id/tvNotificationDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="start"
+            android:textSize="12sp"
+            android:fontFamily="@font/montserrat"
+            android:text="Your vehicle has been added successfully"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/NotificationTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1 Day"
+        android:layout_marginStart="2dp"
+        android:fontFamily="@font/montserrat"
+        android:textSize="13sp"/>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_weight="1"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@color/dark_blue" />
+
+</LinearLayout>
