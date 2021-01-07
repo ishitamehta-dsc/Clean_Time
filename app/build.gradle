@@ -46,7 +46,8 @@ dependencies {
     def lottieVersion = "3.4.0"
     implementation "com.airbnb.android:lottie:$lottieVersion"
 
-   
 
+    // horizontal date picker
+    implementation 'com.github.shrikanth7698:Collapsible-Calendar-View-Android:v1.0.0'
 
 }

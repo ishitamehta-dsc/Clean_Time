@@ -44,33 +44,31 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
                 android:layout_marginTop="24dp"
+                android:orientation="horizontal">
 
-                android:orientation="horizontal"
+<!--                <androidx.cardview.widget.CardView-->
+<!--                    android:layout_width="52dp"-->
+<!--                    android:layout_height="52dp"-->
+<!--                    app:cardCornerRadius="5dp">-->
 
-                >
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:layout_gravity="center"-->
+<!--                        android:background="@color/blue"-->
+<!--                        android:gravity="center"-->
+<!--                        android:orientation="vertical">-->
 
-                <androidx.cardview.widget.CardView
-                    android:layout_width="52dp"
-                    android:layout_height="52dp"
-                    app:cardCornerRadius="5dp">
+<!--                        <ImageView-->
+<!--                            android:layout_width="34dp"-->
+<!--                            android:layout_height="28dp"-->
+<!--                            android:contentDescription="@string/app_name"-->
+<!--                            android:src="@drawable/calender" />-->
+<!--                    </LinearLayout>-->
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="center"
-                        android:background="@color/blue"
-                        android:gravity="center"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:layout_width="34dp"
-                            android:layout_height="28dp"
-                            android:contentDescription="@string/app_name"
-                            android:src="@drawable/calender" />
-                    </LinearLayout>
-
-                </androidx.cardview.widget.CardView>
+<!--                </androidx.cardview.widget.CardView>-->
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
@@ -81,6 +79,21 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
+
+                        <com.shrikanthravi.collapsiblecalendarview.widget.CollapsibleCalendar
+                            android:id="@+id/datePickerTimeline"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:primaryColor="@color/blue"
+                            app:textColor="@android:color/white"
+                            app:selectedItem_textColor="@color/blue"
+                            app:todayItem_textColor="@android:color/white"
+                            app:todayItem_background="@drawable/circle_white_stroke_background"
+                            app:selectedItem_background="@drawable/circle_white_solid_background"
+                            app:buttonLeft_drawableTintColor="@android:color/white"
+                            app:buttonRight_drawableTintColor="@android:color/white"
+                            app:expandIconColor="@android:color/white">
+                        </com.shrikanthravi.collapsiblecalendarview.widget.CollapsibleCalendar>
 
 
                     </LinearLayout>
@@ -98,7 +111,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="16dp"
+                    android:layout_margin="12dp"
                     android:fontFamily="@font/montserrat_bold"
                     android:text="Monday"
                     android:textColor="#707070"
@@ -112,9 +125,23 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="16dp"
+                    android:layout_margin="12dp"
                     android:fontFamily="@font/montserrat_bold"
                     android:text="December , 16 , 2020"
+                    android:textColor="#707070"
+                    android:textSize="12sp" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="#707070" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="12dp"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:text=".8:00 PM"
                     android:textColor="#707070"
                     android:textSize="12sp" />
 
