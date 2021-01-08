@@ -19,8 +19,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CleanTime"
         tools:ignore="AllowBackup">
-        <activity android:name=".activities.ChoosePackageActivity"></activity>
-        <activity android:name=".activities.TrackRequestActivity" />
+        <activity android:name=".activities.TrackRequestActivity"></activity>
+        <activity android:name=".home.HomeActivity" />
         <activity android:name=".activities.ChoosePaymentActivity" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
@@ -43,14 +43,14 @@
         <activity android:name=".auth.OTPActivity" />
         <activity android:name=".auth.LoginActivity" />
         <activity android:name=".common.OnBoardingActivity" />
-        <activity android:name=".common.SplashActivity">
+        <activity android:name=".activities.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".home.HomeActivity" />
+        <activity android:name=".common.SplashActivity" />
         <activity android:name=".activities.SelectCarTypeActivity" />
     </application>
 

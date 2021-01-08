@@ -1,8 +1,394 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".activities.TrackRequestActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_margin="16dp"
+        android:elevation="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/contacts" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Request ID: "
+                    android:textColor="#707070"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="7566G5JJH565 "
+                    android:textColor="#707070"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Mr. Abhi Singh "
+                android:textColor="#707070"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Arrival: "
+                    android:textColor="#707070"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1:32pm "
+                    android:textColor="#707070"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Contacts: "
+                    android:textColor="#707070"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+91 6465269636 "
+                    android:textColor="#707070"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="16dp">
+
+
+            <View
+                android:id="@+id/viewArrived"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginStart="30dp"
+                android:background="@drawable/circle_selected"
+                app:layout_constraintBottom_toBottomOf="@id/tvArrivedTime"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tvArrived" />
+
+            <View
+                android:id="@+id/viewLineArrived"
+                android:layout_width="5dp"
+                android:layout_height="0dp"
+                android:background="@color/dark_blue"
+                app:layout_constraintBottom_toTopOf="@id/viewVehicleReached"
+                app:layout_constraintEnd_toEndOf="@id/viewArrived"
+                app:layout_constraintStart_toStartOf="@id/viewArrived"
+                app:layout_constraintTop_toBottomOf="@id/viewArrived" />
+
+            <TextView
+                android:id="@+id/tvArrived"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Agent arrived to pick up vehicle"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/viewArrived"
+                app:layout_constraintTop_toTopOf="@id/viewArrived" />
+
+            <TextView
+                android:id="@+id/tvArrivedTime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:text="Time: 2:11pm"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/tvArrived"
+                app:layout_constraintTop_toBottomOf="@id/tvArrived" />
+
+            <View
+                android:id="@+id/viewVehicleReached"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginStart="30dp"
+                android:background="@drawable/circle_selected"
+                app:layout_constraintBottom_toBottomOf="@id/tvVehicleTimeReached"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tvVehicleReached" />
+
+            <View
+                android:id="@+id/viewLineWashBegun"
+                android:layout_width="5dp"
+                android:layout_height="0dp"
+                android:background="@color/dark_blue"
+                app:layout_constraintBottom_toTopOf="@id/viewWashBegun"
+                app:layout_constraintEnd_toEndOf="@id/viewVehicleReached"
+                app:layout_constraintStart_toStartOf="@id/viewVehicleReached"
+                app:layout_constraintTop_toBottomOf="@id/viewVehicleReached" />
+
+            <TextView
+                android:id="@+id/tvVehicleReached"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Vehicle reached center"
+                android:textColor="#707070"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/tvArrivedTime"
+                app:layout_constraintTop_toBottomOf="@id/tvArrivedTime" />
+
+            <TextView
+                android:id="@+id/tvVehicleTimeReached"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:text="Time: 2:45pm"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/tvVehicleReached"
+                app:layout_constraintTop_toBottomOf="@id/tvVehicleReached" />
+
+            <View
+                android:id="@+id/viewWashBegun"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginStart="30dp"
+                android:background="@drawable/circle_selected"
+                app:layout_constraintBottom_toBottomOf="@id/tvWashTime"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tvVehicleWashBegan" />
+
+            <TextView
+                android:id="@+id/tvVehicleWashBegan"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Vehicle Wash begun"
+                android:textColor="#707070"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/tvVehicleTimeReached"
+                app:layout_constraintTop_toBottomOf="@id/tvVehicleTimeReached" />
+
+            <TextView
+                android:id="@+id/tvWashTime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:text="Time: 2:57pm"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/tvVehicleWashBegan"
+                app:layout_constraintTop_toBottomOf="@id/tvVehicleWashBegan" />
+
+            <View
+                android:id="@+id/viewVehicleWashComplete"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginStart="30dp"
+                android:background="@drawable/circle_selected"
+                app:layout_constraintBottom_toBottomOf="@id/tvCompleteTime"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tvWashComplete" />
+
+            <View
+                android:id="@+id/viewLineWashComplete"
+                android:layout_width="5dp"
+                android:layout_height="0dp"
+                android:background="@color/dark_blue"
+                app:layout_constraintBottom_toTopOf="@id/viewVehicleWashComplete"
+                app:layout_constraintEnd_toEndOf="@id/viewWashBegun"
+                app:layout_constraintStart_toStartOf="@id/viewWashBegun"
+                app:layout_constraintTop_toBottomOf="@id/viewWashBegun" />
+
+            <TextView
+                android:id="@+id/tvWashComplete"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Vehicle Wash complete"
+                android:textColor="#707070"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/tvWashTime"
+                app:layout_constraintTop_toBottomOf="@id/tvWashTime" />
+
+            <TextView
+                android:id="@+id/tvCompleteTime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:text="Time: 3:11pm"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/tvWashComplete"
+                app:layout_constraintTop_toBottomOf="@id/tvWashComplete" />
+
+            <View
+                android:id="@+id/viewVehicleBack"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginStart="30dp"
+                android:background="@drawable/circle_unselected"
+                app:layout_constraintBottom_toBottomOf="@id/tvBackTime"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tvVehicleBack" />
+
+            <View
+                android:id="@+id/viewLineVehicleBack"
+                android:layout_width="5dp"
+                android:layout_height="0dp"
+                android:background="@color/dark_grey"
+                app:layout_constraintBottom_toTopOf="@id/viewVehicleBack"
+                app:layout_constraintEnd_toEndOf="@id/viewVehicleWashComplete"
+                app:layout_constraintStart_toStartOf="@id/viewVehicleWashComplete"
+                app:layout_constraintTop_toBottomOf="@id/viewVehicleWashComplete" />
+
+            <TextView
+                android:id="@+id/tvVehicleBack"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="Vehicle on the way back"
+                android:textColor="@color/dark_grey"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/tvCompleteTime"
+                app:layout_constraintTop_toBottomOf="@id/tvCompleteTime" />
+
+            <TextView
+                android:id="@+id/tvBackTime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:text="Time: 3:11pm"
+
+                android:textColor="@color/dark_grey"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/tvVehicleBack"
+                app:layout_constraintTop_toBottomOf="@id/tvVehicleBack" />
+
+            <View
+                android:id="@+id/viewComplete"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginStart="30dp"
+                android:background="@drawable/circle_unselected"
+                app:layout_constraintBottom_toBottomOf="@+id/tvRequestCompleteTime"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tvRequestComplete" />
+
+            <View
+                android:layout_width="5dp"
+                android:layout_height="0dp"
+                android:background="@color/dark_grey"
+                app:layout_constraintBottom_toTopOf="@id/viewComplete"
+                app:layout_constraintEnd_toEndOf="@id/viewVehicleBack"
+                app:layout_constraintStart_toStartOf="@id/viewVehicleBack"
+                app:layout_constraintTop_toBottomOf="@id/viewVehicleBack" />
+
+            <TextView
+                android:id="@+id/tvRequestComplete"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="Request Complete"
+                android:textColor="@color/dark_grey"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/tvBackTime"
+                app:layout_constraintTop_toBottomOf="@id/tvBackTime" />
+
+            <TextView
+                android:id="@+id/tvRequestCompleteTime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:text="Time: 3:11pm"
+                android:textColor="@color/dark_grey"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/tvRequestComplete"
+                app:layout_constraintTop_toBottomOf="@id/tvRequestComplete" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/btn_bg"
+        android:fontFamily="@font/montserrat_bold"
+        android:gravity="center"
+        android:text="Go Back Home"
+        android:textColor="@android:color/white"
+        android:textSize="16sp" />
+</LinearLayout>
