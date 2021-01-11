@@ -1,7 +1,9 @@
 package com.example.cleantime.home;
 
+import android.annotation.SuppressLint;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -15,10 +17,10 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.FragmentManager;
 
 import com.example.cleantime.R;
 import com.example.cleantime.auth.LoginActivity;
-import com.example.cleantime.home.fragments.AboutFragment;
 import com.example.cleantime.home.fragments.HomeFragment;
 import com.example.cleantime.home.fragments.MyAddressFragment;
 import com.example.cleantime.home.fragments.MyPackageFragment;
@@ -58,6 +60,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         drawerLayout = findViewById(R.id.drawerLayout);
 
         ivMenuNav = findViewById(R.id.ivMenuNav);
+
         ivNotification = findViewById(R.id.ivNotification);
 
         tvToolbarTitle = findViewById(R.id.tvToolbarTitle);
@@ -69,77 +72,116 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         getSupportFragmentManager().beginTransaction().replace(R.id.frameContent, new
                 HomeFragment()).commit();
         nav_view.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @SuppressLint("UseCompatLoadingForDrawables")
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
 
+
+                    case R.id.home:
+                        getSupportFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.frameContent,
+                                new HomeFragment()).commit();
+                        tvToolbarTitle.setText("Home");
+                        drawerLayout.closeDrawer(GravityCompat.START);
+                        break;
+
+
                     case R.id.profile:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.frameContent,
-                                new MyProfileFragment()).addToBackStack(null).commit();
+                        getSupportFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.frameContent,
+                                new MyProfileFragment()).commit();
                         tvToolbarTitle.setText("My Profile");
+//                        ivMenuNav.setImageDrawable(getResources().getDrawable(R.drawable.ic_back));
+//                        ivMenuNav.getLayoutParams().height = 50;
+//                        ivMenuNav.getLayoutParams().width = 50;
+//                        FragmentManager fragmentManager = getSupportFragmentManager();
+//                        fragmentManager.addOnBackStackChangedListener(new FragmentManager.OnBackStackChangedListener() {
+//                            @Override
+//                            public void onBackStackChanged() {
+//                                if(getFragmentManager().getBackStackEntryCount() == 0) ;
+//
+//                            }
+//                        });
                         drawerLayout.closeDrawer(GravityCompat.START);
                         break;
 
                     case R.id.packages:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.frameContent,
-                                new MyPackageFragment()).addToBackStack(null).commit();
+                        getSupportFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.frameContent,
+                                new MyPackageFragment()).commit();
                         tvToolbarTitle.setText("My Packages");
+//                        ivMenuNav.setImageDrawable(getResources().getDrawable(R.drawable.ic_back));
+//                        ivMenuNav.getLayoutParams().height = 50;
+//                        ivMenuNav.getLayoutParams().width = 50;
                         drawerLayout.closeDrawer(GravityCompat.START);
                         break;
 
                     case R.id.address:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.frameContent,
-                                new MyAddressFragment()).addToBackStack(null).commit();
+                        getSupportFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.frameContent,
+                                new MyAddressFragment()).commit();
                         tvToolbarTitle.setText("My Address");
+//                        ivMenuNav.setImageDrawable(getResources().getDrawable(R.drawable.ic_back));
+//                        ivMenuNav.getLayoutParams().height = 50;
+//                        ivMenuNav.getLayoutParams().width = 50;
                         drawerLayout.closeDrawer(GravityCompat.START);
                         break;
 
                     case R.id.vehicle:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.frameContent,
-                                new MyVehicleFragment()).addToBackStack(null).commit();
+                        getSupportFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.frameContent,
+                                new MyVehicleFragment()).commit();
                         tvToolbarTitle.setText("My Vehicles");
+//                        ivMenuNav.setImageDrawable(getResources().getDrawable(R.drawable.ic_back));
+//                        ivMenuNav.getLayoutParams().height = 50;
+//                        ivMenuNav.getLayoutParams().width = 50;
                         drawerLayout.closeDrawer(GravityCompat.START);
                         break;
 
                     case R.id.payment:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.frameContent,
-                                new MyPaymentFragment()).addToBackStack(null).commit();
+                        getSupportFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.frameContent,
+                                new MyPaymentFragment()).commit();
                         tvToolbarTitle.setText("My Payments");
+//                        ivMenuNav.setImageDrawable(getResources().getDrawable(R.drawable.ic_back));
+//                        ivMenuNav.getLayoutParams().height = 50;
+//                        ivMenuNav.getLayoutParams().width = 50;
                         drawerLayout.closeDrawer(GravityCompat.START);
                         break;
 
                     case R.id.notification:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.frameContent,
-                                new NotificationFragment()).addToBackStack(null).commit();
+                        getSupportFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.frameContent,
+                                new NotificationFragment()).commit();
                         tvToolbarTitle.setText("Notifications");
+//                        ivMenuNav.setImageDrawable(getResources().getDrawable(R.drawable.ic_back));
+//                        ivMenuNav.getLayoutParams().height = 50;
+//                        ivMenuNav.getLayoutParams().width = 50;
                         drawerLayout.closeDrawer(GravityCompat.START);
                         break;
 
                     case R.id.requests:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.frameContent,
-                                new MyRequestsFragment()).addToBackStack(null).commit();
+                        getSupportFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.frameContent,
+                                new MyRequestsFragment()).commit();
                         tvToolbarTitle.setText("My Requests");
+//                        ivMenuNav.setImageDrawable(getResources().getDrawable(R.drawable.ic_back));
+//                        ivMenuNav.getLayoutParams().height = 50;
+//                        ivMenuNav.getLayoutParams().width = 50;
                         drawerLayout.closeDrawer(GravityCompat.START);
                         break;
 
                     case R.id.support:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.frameContent,
-                                new SupportFragment()).addToBackStack(null).commit();
+                        getSupportFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.frameContent,
+                                new SupportFragment()).commit();
                         tvToolbarTitle.setText("Support");
+//                        ivMenuNav.setImageDrawable(getResources().getDrawable(R.drawable.ic_back));
+//                        ivMenuNav.getLayoutParams().height = 50;
+//                        ivMenuNav.getLayoutParams().width = 50;
                         drawerLayout.closeDrawer(GravityCompat.START);
                         break;
 
-                    case R.id.about:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.frameContent,
-                                new AboutFragment()).addToBackStack(null).commit();
-                        tvToolbarTitle.setText("About");
-                        drawerLayout.closeDrawer(GravityCompat.START);
-                        break;
 
                     case R.id.services:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.frameContent,
-                                new ServicesFragment()).addToBackStack(null).commit();
+                        getSupportFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.frameContent,
+                                new ServicesFragment()).commit();
                         tvToolbarTitle.setText("Services");
+//                        ivMenuNav.setImageDrawable(getResources().getDrawable(R.drawable.ic_back));
+//                        ivMenuNav.getLayoutParams().height = 50;
+//                        ivMenuNav.getLayoutParams().width = 50;
                         drawerLayout.closeDrawer(GravityCompat.START);
                         break;
 

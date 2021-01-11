@@ -50,6 +50,7 @@
             android:orientation="vertical">
 
             <ImageView
+                android:id="@+id/ivAddVehicle"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_marginStart="8dp"

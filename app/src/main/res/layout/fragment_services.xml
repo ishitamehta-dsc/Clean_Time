@@ -35,6 +35,7 @@
                 android:orientation="horizontal">
 
                 <LinearLayout
+                    android:id="@+id/lvSedan"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -70,6 +71,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/lvPremiumSedan"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -100,11 +102,12 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Premium Sedon"
+                        android:text="Premium Sedan"
                         android:textSize="16sp" />
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/lvHatchback"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -149,6 +152,7 @@
                 android:orientation="horizontal">
 
                 <LinearLayout
+                    android:id="@+id/lvLuxury"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -184,6 +188,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/lvCompactSuv"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -218,11 +223,12 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:gravity="center"
-                        android:text="Sab-compact\nSUV"
-                        android:textSize="16sp" />
+                        android:text="Compact SUV"
+                        android:textSize="16sp"/>
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/lvSuv"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"

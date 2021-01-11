@@ -3,6 +3,7 @@ package com.example.cleantime.activities;
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -11,6 +12,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.cleantime.R;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+
+    private ImageView ivGoBack;
 
     private TextView tvSedan;
     private TextView tvHatchback;
@@ -33,6 +36,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void initViews() {
+        ivGoBack =findViewById(R.id.ivGoBack);
+
         tvSedan = findViewById(R.id.tvSedan);
         tvHatchback = findViewById(R.id.tvHatchback);
         tvSUV = findViewById(R.id.tvSUV);
@@ -49,10 +54,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         tvSUV.setOnClickListener(this);
         tvLuxury.setOnClickListener(this);
 
+        switchSedan();
+
     }
 
     @Override
     public void onClick(View v) {
+        if (v == ivGoBack){
+            onBackPressed();
+        }
+
         if (v == tvSedan) {
             switchSedan();
         }
@@ -65,6 +76,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if (v == tvLuxury) {
             switchLuxury();
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+
     }
 
     @SuppressLint("SetTextI18n")

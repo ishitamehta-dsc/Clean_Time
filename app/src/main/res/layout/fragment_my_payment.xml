@@ -262,7 +262,7 @@
                                 android:gravity="center"
                                 android:text="@string/expires_04_25"
                                 android:textColor="@color/white"
-                                android:textSize="15sp" />
+                                android:textSize="15sp"/>
                         </LinearLayout>
 
                         <FrameLayout
@@ -285,6 +285,7 @@
         </ScrollView>
 
         <TextView
+            android:id="@+id/tvAddPaymentMethod"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:layout_marginStart="32dp"
