@@ -1,20 +1,16 @@
 package com.example.cleantime.activities;
 
 import android.Manifest;
-import android.app.Activity;
 import android.app.DialogFragment;
 import android.app.Fragment;
 import android.app.FragmentTransaction;
-import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
 import android.os.Bundle;
 import android.widget.Button;
-import android.widget.Toast;
 
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
@@ -27,25 +23,21 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
-import com.google.android.libraries.places.api.model.Place;
-import com.rtchagas.pingplacepicker.PingPlacePicker;
 
 import java.io.IOException;
 import java.util.List;
 import java.util.Locale;
 
-public class ChoosePaymentActivity extends AppCompatActivity implements OnMapReadyCallback {
-    private GoogleMap mMap;
+public class DemoActivity extends AppCompatActivity implements OnMapReadyCallback {
     private final static int PLACE_PICKER_REQUEST = 999;
     private final static int LOCATION_REQUEST_CODE = 23;
     Button btn;
+    private GoogleMap mMap;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_choose_payment);
-
-        showPlacePicker();
+        setContentView(R.layout.activity_demo);
 
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
@@ -57,19 +49,6 @@ public class ChoosePaymentActivity extends AppCompatActivity implements OnMapRea
                     LOCATION_REQUEST_CODE);
         }
     }
-
-    private void showPlacePicker() {
-        PingPlacePicker.IntentBuilder builder = new PingPlacePicker.IntentBuilder();
-        builder.setAndroidApiKey("YOUR_ANDROID_API_KEY")
-                .setMapsApiKey("AIzaSyBOyIsLlhZeKu4ui5oF2R3QEDincJZAGXs");
-        try {
-            Intent placeIntent = builder.build(this);
-            startActivityForResult(placeIntent, 1001);
-        } catch (Exception ex) {
-            // Google Play services is not available...
-        }
-    }
-
 
     @Override
     public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
@@ -166,17 +145,5 @@ public class ChoosePaymentActivity extends AppCompatActivity implements OnMapRea
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
-    }
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if ((requestCode == 1001) && (resultCode == Activity.RESULT_OK)) {
-
-            Place place = PingPlacePicker.getPlace(data);
-            if (place != null) {
-                Toast.makeText(this, "You selected the place: " + place.getName(), Toast.LENGTH_SHORT).show();
-            }
-        }
     }
 }

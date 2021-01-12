@@ -3,13 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.cleantime">
 
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
 
     <application
         android:allowBackup="true"
@@ -19,21 +16,26 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CleanTime"
         tools:ignore="AllowBackup">
-        <activity android:name=".activities.TrackRequestActivity"></activity>
-        <activity android:name=".home.HomeActivity" />
-        <activity android:name=".activities.ChoosePaymentActivity" />
-        <!--
-             The API key for Google Maps-based APIs is defined as a string resource.
-             (See the file "res/values/google_maps_api.xml").
-             Note that the API key is linked to the encryption key used to sign the APK.
-             You need a different API key for each encryption key, including the release key that is used to
-             sign the APK for publishing.
-             You can define the keys for the debug and release targets in src/debug/ and src/release/.
-        -->
+
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="@string/google_maps_key" />
+            android:value="AIzaSyBOyIsLlhZeKu4ui5oF2R3QEDincJZAGXs" />
 
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+
+        <activity android:name=".activities.DemoActivity">
+
+            <meta-data
+                android:name="com.google.android.geo.API_KEY"
+                android:value="AIzaSyBOyIsLlhZeKu4ui5oF2R3QEDincJZAGXs" />
+
+        </activity>
+        <activity android:name=".activities.TrackRequestActivity" />
+        <activity android:name=".home.HomeActivity" />
+        <activity android:name=".activities.MainActivity" />
         <activity
             android:name=".activities.MapsActivity"
             android:label="@string/title_activity_maps" />
@@ -43,6 +45,12 @@
         <activity android:name=".auth.OTPActivity" />
         <activity android:name=".auth.LoginActivity" />
         <activity android:name=".common.OnBoardingActivity" />
+        <activity android:name=".activities.ChoosePaymentActivity">
+            <meta-data
+                android:name="com.google.android.geo.API_KEY"
+                android:value="AIzaSyBOyIsLlhZeKu4ui5oF2R3QEDincJZAGXs" />
+
+        </activity>
         <activity android:name=".common.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -50,7 +58,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.MainActivity" />
         <activity android:name=".activities.SelectCarTypeActivity" />
     </application>
 

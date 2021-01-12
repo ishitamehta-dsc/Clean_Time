@@ -2,16 +2,14 @@ package com.example.cleantime.home.fragments;
 
 import android.content.Intent;
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
+import android.widget.TextView;
+
+import androidx.fragment.app.Fragment;
 
 import com.example.cleantime.R;
-import com.example.cleantime.activities.ChooseActivity;
 import com.example.cleantime.activities.ChoosePaymentActivity;
 
 
@@ -19,14 +17,12 @@ public class MyAddressFragment extends Fragment implements View.OnClickListener 
 
     private View view;
 
-    private ImageView tvAddressUpdate;
+    private TextView tvAddressUpdate;
 
 
     public MyAddressFragment() {
         // Required empty public constructor
     }
-
-
 
 
     @Override
@@ -46,10 +42,10 @@ public class MyAddressFragment extends Fragment implements View.OnClickListener 
 
     @Override
     public void onClick(View view) {
-        if (view == tvAddressUpdate){
+        if (view == tvAddressUpdate) {
             Intent intent = new Intent(getContext(), ChoosePaymentActivity.class);
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-            startActivity(intent);
+            getContext().startActivity(intent);
 
         }
     }

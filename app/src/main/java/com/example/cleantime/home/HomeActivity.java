@@ -3,7 +3,6 @@ package com.example.cleantime.home;
 import android.annotation.SuppressLint;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -11,20 +10,15 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
-import android.widget.Toolbar;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
 
 import com.example.cleantime.R;
 import com.example.cleantime.auth.LoginActivity;
-import com.example.cleantime.home.fragments.BaseFragment;
 import com.example.cleantime.home.fragments.HomeFragment;
 import com.example.cleantime.home.fragments.MyAddressFragment;
 import com.example.cleantime.home.fragments.MyPackageFragment;
@@ -37,10 +31,7 @@ import com.example.cleantime.home.fragments.ServicesFragment;
 import com.example.cleantime.home.fragments.SupportFragment;
 import com.google.android.material.navigation.NavigationView;
 
-import java.util.List;
-
-public class HomeActivity extends AppCompatActivity implements View.OnClickListener {// NavigationView.OnNavigationItemSelectedListener,
-       // androidx.fragment.app.FragmentManager.OnBackStackChangedListener {
+public class HomeActivity extends AppCompatActivity implements View.OnClickListener {
 
     private DrawerLayout drawerLayout;
 
@@ -51,9 +42,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
     private FrameLayout frameContent;
     private NavigationView nav_view;
 
-
     private LinearLayout lhActionBarContent;
-    private boolean mToolBarNavigationListenerIsRegistered = false;
 
     private static final String TAG = "HomeActivity";
 
@@ -67,18 +56,15 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
 
     private void initViews() {
         drawerLayout = findViewById(R.id.drawerLayout);
+
         ivMenuNav = findViewById(R.id.ivMenuNav);
+
         ivNotification = findViewById(R.id.ivNotification);
+
         tvToolbarTitle = findViewById(R.id.tvToolbarTitle);
         frameContent = findViewById(R.id.frameContent);
+
         nav_view = findViewById(R.id.nav_view);
-
-        lhActionBarContent = findViewById(R.id.lhActionBarContent);
-        //setSupportActionBar(lhActionBarContent);
-       // getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
-       // getSupportFragmentManager().addOnBackStackChangedListener(this);
-       // displayHomeUp();
 
         ivMenuNav.setOnClickListener(this);
         getSupportFragmentManager().beginTransaction().replace(R.id.frameContent, new
@@ -208,9 +194,9 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
                                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
                                 startActivity(intent);
                                 finish();
+
                             }
                         });
-
                         builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
@@ -227,60 +213,16 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     @Override
-    public void onBackPressed() {
-        tellFragments();
-        super.onBackPressed();
-    }
-
-    private void tellFragments() {
-        List<Fragment> fragments = getSupportFragmentManager().getFragments();
-        for(Fragment f : fragments){
-            if(f != null && f instanceof BaseFragment)
-                ((BaseFragment)f).onBackPressed();
-        }
-
-    }
-
-//    private void displayHomeUp() {
-//
-//        boolean upBtn = getSupportFragmentManager().getBackStackEntryCount() > 0;
-//
-//        if (upBtn){
-//            //cant swipe left to open drawer
-//            drawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED);
-//
-//
-//            //remove hamburger
-//           ivMenuNav.setDrawerIndicatorEnabled(false);
-//
-//            if (!mToolBarNavigationListenerIsRegistered){
-//                ivMenuNav.setToolba
-//          }
-//
-//        }
-//    }
-
-//    private void setSupportActionBar(LinearLayout lhActionBarContent) {
-//    }
-
-    @Override
     public void onClick(View v) {
         if (v == ivMenuNav) {
             openMenu();
         }
+
     }
 
     private void openMenu() {
         drawerLayout.openDrawer(GravityCompat.START);
     }
 
-//    @Override
-//    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-//        return false;
-//    }
-//
-//    @Override
-//    public void onBackStackChanged() {
-//
-//    }
+
 }

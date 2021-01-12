@@ -82,7 +82,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        finish();
     }
 
     @SuppressLint("SetTextI18n")
@@ -126,6 +125,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         lvSUV.setVisibility(View.VISIBLE);
         lvHatchback.setVisibility(View.GONE);
         lvSedan.setVisibility(View.GONE);
+
+
     }
 
     @SuppressLint("SetTextI18n")

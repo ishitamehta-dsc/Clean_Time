@@ -45,11 +45,17 @@ dependencies {
 
     def lottieVersion = "3.4.0"
     implementation "com.airbnb.android:lottie:$lottieVersion"
-
+        
 
     // horizontal date picker
     implementation 'com.github.shrikanth7698:Collapsible-Calendar-View-Android:v1.0.0'
 
+    // Places library
+    implementation 'com.google.android.libraries.places:places:2.0.0'
+    // PING Place Picker
+    implementation 'com.github.rtchagas:pingplacepicker:2.0.+'
 
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
+    implementation 'com.google.android.gms:play-services-places:17.0.0'
 
 }
