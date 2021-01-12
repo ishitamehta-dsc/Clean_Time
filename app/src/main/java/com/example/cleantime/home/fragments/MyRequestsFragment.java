@@ -11,13 +11,14 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.cleantime.R;
 import com.example.cleantime.adapter.MyRequestAdapter;
+import com.example.cleantime.home.OnBackPressed;
 import com.example.cleantime.model.MyRequestModel;
 
 import java.util.ArrayList;
 import java.util.List;
 
 
-public class MyRequestsFragment extends Fragment {
+public class MyRequestsFragment extends Fragment implements OnBackPressed {
 
     private View view;
     private RecyclerView requestRecyclerView;
@@ -87,5 +88,10 @@ public class MyRequestsFragment extends Fragment {
         myRequestAdapter = new MyRequestAdapter(getContext(), myRequestModels);
         requestRecyclerView.setAdapter(myRequestAdapter);
         myRequestAdapter.notifyDataSetChanged();
+    }
+
+    @Override
+    public void onBackPressed() {
+        getActivity().getSupportFragmentManager().popBackStack();
     }
 }

@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".home.fragments.SedanFragment">
+    tools:context=".activities.package_fragments.SedanFragment">
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -227,6 +227,7 @@
         </LinearLayout>
 
         <TextView
+            android:id="@+id/tvAddItem"
             android:layout_width="50dp"
             android:layout_height="25dp"
             android:layout_gravity="end"

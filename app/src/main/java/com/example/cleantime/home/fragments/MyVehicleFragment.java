@@ -16,15 +16,20 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import com.example.cleantime.R;
+import com.example.cleantime.home.OnBackPressed;
+
+import java.sql.RowId;
 
 
-public class MyVehicleFragment extends Fragment implements View.OnClickListener {
+public class MyVehicleFragment extends Fragment implements View.OnClickListener, OnBackPressed {
     
     private View view;
     private ImageView ivAddVehicle;
     private RecyclerView rvMyVehicles;
 
     private ImageView ivGoBack;
+
+    private static final String TAG = "MyVehicleFragment";
 
 
     public MyVehicleFragment() {
@@ -54,7 +59,7 @@ public class MyVehicleFragment extends Fragment implements View.OnClickListener 
     public void onClick(View view) {
 
         if (view == ivGoBack){
-            OnBackPressed();
+            onBackPressed();
 
         }
 
@@ -64,10 +69,6 @@ public class MyVehicleFragment extends Fragment implements View.OnClickListener 
 
     }
 
-    private void OnBackPressed() {
-
-
-    }
 
     private void gotoAddVehicles() {
 
@@ -77,5 +78,10 @@ public class MyVehicleFragment extends Fragment implements View.OnClickListener 
         fragmentTransaction.replace(R.id.frameContent, fragment);
         fragmentTransaction.commit();
 
+    }
+
+    @Override
+    public void onBackPressed() {
+       getActivity().getSupportFragmentManager().popBackStack();
     }
 }

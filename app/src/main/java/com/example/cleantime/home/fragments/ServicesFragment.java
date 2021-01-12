@@ -13,9 +13,10 @@ import androidx.fragment.app.FragmentTransaction;
 
 import com.example.cleantime.R;
 import com.example.cleantime.activities.MainActivity;
+import com.example.cleantime.home.OnBackPressed;
 
 
-public class ServicesFragment extends Fragment implements View.OnClickListener {
+public class ServicesFragment extends Fragment implements View.OnClickListener, OnBackPressed {
     private View view;
 
     private LinearLayout lvSedan;
@@ -24,6 +25,8 @@ public class ServicesFragment extends Fragment implements View.OnClickListener {
     private LinearLayout lvLuxury;
     private LinearLayout lvCompactSuv;
     private LinearLayout lvSuv;
+
+    private static final String TAG = "ServicesFragment";
 
     public ServicesFragment() {
         // Required empty public constructor
@@ -98,6 +101,12 @@ public class ServicesFragment extends Fragment implements View.OnClickListener {
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
             startActivity(intent);
         }
+
+    }
+
+    @Override
+    public void onBackPressed() {
+        getActivity().getSupportFragmentManager().popBackStack();
 
     }
 }

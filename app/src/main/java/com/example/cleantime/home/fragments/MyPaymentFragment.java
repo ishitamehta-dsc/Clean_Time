@@ -14,9 +14,10 @@ import com.example.cleantime.R;
 import com.example.cleantime.activities.ChooseActivity;
 import com.example.cleantime.activities.ChoosePaymentActivity;
 import com.example.cleantime.activities.MainActivity;
+import com.example.cleantime.home.OnBackPressed;
 
 
-public class MyPaymentFragment extends Fragment implements View.OnClickListener {
+public class MyPaymentFragment extends Fragment implements View.OnClickListener, OnBackPressed {
 
     private View view;
 
@@ -51,5 +52,10 @@ public class MyPaymentFragment extends Fragment implements View.OnClickListener 
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
             startActivity(intent);
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        getActivity().getSupportFragmentManager().popBackStack();
     }
 }

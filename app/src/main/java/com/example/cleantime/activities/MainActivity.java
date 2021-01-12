@@ -26,12 +26,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private LinearLayout lvSUV;
     private LinearLayout lvLuxury;
 
+    private static final String TAG = "MainActivity";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         initViews();
     }
 
@@ -81,7 +82,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-
+        finish();
     }
 
     @SuppressLint("SetTextI18n")

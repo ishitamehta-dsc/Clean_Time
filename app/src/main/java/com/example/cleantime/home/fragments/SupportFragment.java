@@ -9,8 +9,9 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.cleantime.R;
+import com.example.cleantime.home.OnBackPressed;
 
-public class SupportFragment extends Fragment {
+public class SupportFragment extends Fragment implements OnBackPressed {
 
 
 
@@ -32,5 +33,10 @@ public class SupportFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_support, container, false);
+    }
+
+    @Override
+    public void onBackPressed() {
+        getActivity().getSupportFragmentManager().popBackStack();
     }
 }

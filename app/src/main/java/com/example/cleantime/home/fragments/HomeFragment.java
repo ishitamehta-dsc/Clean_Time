@@ -11,11 +11,14 @@ import androidx.fragment.app.Fragment;
 
 import com.example.cleantime.R;
 import com.example.cleantime.activities.ChoosePaymentActivity;
+import com.example.cleantime.home.OnBackPressed;
 
 
-public class HomeFragment extends Fragment {
+public class HomeFragment extends Fragment implements OnBackPressed {
     private View view;
     private LinearLayout lvTypeCar;
+
+    private static final String TAG = "HomeFragment";
 
     public HomeFragment() {
         // Required empty public constructor
@@ -35,5 +38,10 @@ public class HomeFragment extends Fragment {
             }
         });
         return view;
+    }
+
+    @Override
+    public void onBackPressed() {
+        getActivity().getSupportFragmentManager().popBackStack();
     }
 }
