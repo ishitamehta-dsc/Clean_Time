@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         tvLuxury.setOnClickListener(this);
 
         switchSedan();
-
+        //switch
     }
 
     @Override
