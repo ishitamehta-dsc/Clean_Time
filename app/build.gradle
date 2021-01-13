@@ -52,10 +52,16 @@ dependencies {
 
     // Places library
     implementation 'com.google.android.libraries.places:places:2.0.0'
+
     // PING Place Picker
     implementation 'com.github.rtchagas:pingplacepicker:2.0.+'
 
+    //Google maps
     implementation 'com.google.android.gms:play-services-maps:17.0.0'
     implementation 'com.google.android.gms:play-services-places:17.0.0'
+
+    //retrofit android
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
 
 }
