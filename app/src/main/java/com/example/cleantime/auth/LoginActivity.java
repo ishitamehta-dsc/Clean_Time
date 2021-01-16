@@ -11,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.cleantime.R;
+import com.google.firebase.auth.FirebaseAuth;
 
 import org.w3c.dom.Text;
 
@@ -22,6 +23,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
     private TextView tvGetOtp;
 
+    private FirebaseAuth firebaseAuth;
+
+    private final static String country = "+91";
     private static final String TAG = "LoginActivity";
 
     @Override
@@ -40,6 +44,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
         tvGetOtp = findViewById(R.id.tvGetOtp);
         tvGetOtp.setOnClickListener(this);
+
+        firebaseAuth = FirebaseAuth.getInstance();
+
     }
 
     @Override
@@ -56,7 +63,15 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
         }
 
+        @Override
+        public void onBackPressed() {
+            super.onBackPressed();
+            finish();
+        }
+
+
     private void validatePhoneNumber(String phoneNumber) {
+
         if (!TextUtils.isDigitsOnly(phoneNumber)){
             etPhoneNumber.setError("Enter valid phone number.");
             return;
@@ -71,14 +86,16 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             etPhoneNumber.setError("Enter a valid 10 digit phone number.");
             return;
         }
-
         gotoCodeScreen(phoneNumber);
     }
 
     private void gotoCodeScreen(String phoneNumber) {
 
         Intent intent = new Intent(LoginActivity.this, OTPActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
         intent.putExtra("phoneNumber", phoneNumber);
         startActivity(intent);
+        finish();
     }
 }

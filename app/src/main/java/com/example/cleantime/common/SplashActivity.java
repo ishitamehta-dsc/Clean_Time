@@ -7,6 +7,9 @@ import android.os.Handler;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.cleantime.R;
+import com.example.cleantime.auth.LoginActivity;
+import com.example.cleantime.home.HomeActivity;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class SplashActivity extends AppCompatActivity {
 
@@ -22,13 +25,24 @@ public class SplashActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                goToOnBoard();
+                FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
+                if (firebaseAuth.getCurrentUser() != null) {
+                    gotoHome();
+                } else {
+                    gotoLogin();
+                }
             }
         }, 3000);
     }
 
-    private void goToOnBoard() {
-        Intent intent = new Intent(SplashActivity.this, OnBoardingActivity.class);
+    private void gotoLogin() {
+        Intent intent = new Intent(SplashActivity.this, LoginActivity.class);
+        startActivity(intent);
+        finish();
+    }
+
+    private void gotoHome() {
+        Intent intent = new Intent(SplashActivity.this, HomeActivity.class);
         startActivity(intent);
         finish();
     }

@@ -1,33 +1,41 @@
 {
   "project_info": {
-    "project_number": "882113830134",
-    "project_id": "clean-time-9833e",
-    "storage_bucket": "clean-time-9833e.appspot.com"
+    "project_number": "1027017255095",
+    "project_id": "clean-time-7b",
+    "storage_bucket": "clean-time-7b.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:882113830134:android:a9ffd3de65f676256320d7",
+        "mobilesdk_app_id": "1:1027017255095:android:bc704534f7df1c4aed8532",
         "android_client_info": {
-          "package_name": "com.example.cleantime"
+          "package_name": "in.cleantime.customer"
         }
       },
       "oauth_client": [
         {
-          "client_id": "882113830134-m9kthrjpo9mqkq76poq8cisjqc9tnt4f.apps.googleusercontent.com",
+          "client_id": "1027017255095-2j7arftimv2sbg5583jvr25bg1q298nt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "in.cleantime.customer",
+            "certificate_hash": "541c9f633a976703e3c227082f6c0591490a25cc"
+          }
+        },
+        {
+          "client_id": "1027017255095-bfalnrla0ks35tck1rjp4jd0p18bpta8.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyC5dCvV_tnVrlgztZaZB5CoK02FyU78Dp4"
+          "current_key": "AIzaSyD3BciGgDu_wcQ4F2cGIW_QiCoFDzZCMKE"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "882113830134-m9kthrjpo9mqkq76poq8cisjqc9tnt4f.apps.googleusercontent.com",
+              "client_id": "1027017255095-bfalnrla0ks35tck1rjp4jd0p18bpta8.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

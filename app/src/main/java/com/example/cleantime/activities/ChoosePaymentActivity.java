@@ -27,8 +27,6 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
-import com.google.android.libraries.places.api.model.Place;
-import com.rtchagas.pingplacepicker.PingPlacePicker;
 
 import java.io.IOException;
 import java.util.List;
@@ -45,7 +43,7 @@ public class ChoosePaymentActivity extends AppCompatActivity implements OnMapRea
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_choose_payment);
 
-        showPlacePicker();
+      //  showPlacePicker();
 
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
@@ -58,17 +56,17 @@ public class ChoosePaymentActivity extends AppCompatActivity implements OnMapRea
         }
     }
 
-    private void showPlacePicker() {
-        PingPlacePicker.IntentBuilder builder = new PingPlacePicker.IntentBuilder();
-        builder.setAndroidApiKey("YOUR_ANDROID_API_KEY")
-                .setMapsApiKey("AIzaSyBOyIsLlhZeKu4ui5oF2R3QEDincJZAGXs");
-        try {
-            Intent placeIntent = builder.build(this);
-            startActivityForResult(placeIntent, 1001);
-        } catch (Exception ex) {
-            // Google Play services is not available...
-        }
-    }
+//    private void showPlacePicker() {
+//        PingPlacePicker.IntentBuilder builder = new PingPlacePicker.IntentBuilder();
+//        builder.setAndroidApiKey("YOUR_ANDROID_API_KEY")
+//                .setMapsApiKey("AIzaSyBOyIsLlhZeKu4ui5oF2R3QEDincJZAGXs");
+//        try {
+//            Intent placeIntent = builder.build(this);
+//            startActivityForResult(placeIntent, 1001);
+//        } catch (Exception ex) {
+//            // Google Play services is not available...
+//        }
+//    }
 
 
     @Override
@@ -173,10 +171,10 @@ public class ChoosePaymentActivity extends AppCompatActivity implements OnMapRea
         super.onActivityResult(requestCode, resultCode, data);
         if ((requestCode == 1001) && (resultCode == Activity.RESULT_OK)) {
 
-            Place place = PingPlacePicker.getPlace(data);
-            if (place != null) {
-                Toast.makeText(this, "You selected the place: " + place.getName(), Toast.LENGTH_SHORT).show();
-            }
+//            Place place = PingPlacePicker.getPlace(data);
+//            if (place != null) {
+//                Toast.makeText(this, "You selected the place: " + place.getName(), Toast.LENGTH_SHORT).show();
+//            }
         }
     }
 }

@@ -71,13 +71,15 @@ public class MyVehicleFragment extends Fragment implements View.OnClickListener,
 
 
     private void gotoAddVehicles() {
+        fragmentReplace(new ServicesFragment(), "service");
+    }
 
-        Fragment fragment = new ServicesFragment();
+    public void fragmentReplace(Fragment fragment, String tag){
         FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.frameContent, fragment);
+        fragmentTransaction.replace(R.id.frameContent,fragment , tag);
+        fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
-
     }
 
     @Override

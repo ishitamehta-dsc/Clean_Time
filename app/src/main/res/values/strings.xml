@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">Clean Time</string>
     <string name="all_2_4_wheelers_cleaning_and_detailing_service"><![CDATA[All 2&4 wheelers cleaning and detailing service]]></string>
     <string name="next">Next</string>
@@ -8,8 +8,8 @@
     <string name="_1234567890">1234567890</string>
     <string name="you_accept_all_privacy_policy">You Accept All Privacy Policy</string>
     <string name="verify_your_mobile_number">Verify Your Mobile Number</string>
-    <string name="enter_the_pin_you_have_received_via_sms_on_xxxxxx1254">Enter the pin you have received via SMS on xxxxxx1254</string>
-    <string name="please_enter_the_correct_otp_or_click_on_resend_code">Please enter the correct OTP or click on Resend Code</string>
+    <string name="code_notice">Please enter a 6 digit code received on phone number</string>
+
     <string name="resend_code">Resend Code</string>
     <string name="verify">Verify</string>
     <string name="my_profile">My Profile</string>
